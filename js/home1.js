@@ -12,9 +12,9 @@ document.getElementById('btn-donaite').addEventListener('click', function(){
     const balanceElement = document.getElementById('amount-value');
     const currentBalance = parseFloat(balanceElement.innerText);
 
-    if(isNaN(inputAmountFlied) || inputAmountFlied > 0){
+    if(!isNaN(inputAmount) && inputAmount > 0){
         //amount add
-        const newAmount = inputAmountFlied + currentAmmount;
+        const newAmount = inputAmountFlied + currentAmount;
         amountValueElement.innerText = newAmount;
 
         const newBalance = currentBalance - inputAmountFlied;
