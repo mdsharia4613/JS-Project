@@ -30,7 +30,7 @@
     <main>
         <section class="text-center mt-15">
             <button class="btn bg-green-400 p-3">Donation</button>
-            <button class="btn border p-3">History</button>
+            <button id="show-history" class="btn border p-3">History</button>
         </section>
 
         <!-- card -->
@@ -43,7 +43,7 @@
                         <img src="./assets/feni.png" alt="Movie" class="w-400" />
                     </figure>
                     <div class="card-body">
-                        <div class="flex items-center gap-4"> 
+                        <div class="flex items-center gap-4">
                             <img src="./assets/coin.png" alt="">
                             <p class="font-semibold"><span class="amount">0</span> BDT</p>
                         </div>
@@ -53,7 +53,8 @@
                             this disaster. Every contribution, big or small, makes difference. Please join us in
                             supporting the relief efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <input  type="text" placeholder="Write Donation Amount" class="input-amount-field border  p-3 rounded-xl">
+                        <input type="text" placeholder="Write Donation Amount"
+                            class="input-amount-field border  p-3 rounded-xl">
                         <div class="card-actions ">
                             <button class="btn-donaite btn btn-primary p-3 bg-green-400">Donate Now</button>
                         </div>
@@ -66,7 +67,7 @@
                         <img src="./assets/feni.png" alt="Movie" class="w-400" />
                     </figure>
                     <div class="card-body">
-                        <div class="flex items-center gap-4"> 
+                        <div class="flex items-center gap-4">
                             <img src="./assets/coin.png" alt="">
                             <p class="font-semibold"><span class="amount">0</span> BDT</p>
                         </div>
@@ -76,9 +77,10 @@
                             this disaster. Every contribution, big or small, makes difference. Please join us in
                             supporting the relief efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <input  type="text" placeholder="Write Donation Amount" class="input-amount-field border  p-3 rounded-xl">
+                        <input type="text" placeholder="Write Donation Amount"
+                            class="input-amount-field border  p-3 rounded-xl">
                         <div class="card-actions ">
-                            <button  class="btn-donaite btn btn-primary p-3 bg-green-400">Donate Now</button>
+                            <button class="btn-donaite btn btn-primary p-3 bg-green-400">Donate Now</button>
                         </div>
                     </div>
                 </div>
@@ -89,7 +91,7 @@
                         <img src="./assets/feni.png" alt="Movie" class="w-400" />
                     </figure>
                     <div class="card-body">
-                        <div class="flex items-center gap-4"> 
+                        <div class="flex items-center gap-4">
                             <img src="./assets/coin.png" alt="">
                             <p class="font-semibold"><span class="amount">0</span> BDT</p>
                         </div>
@@ -99,16 +101,22 @@
                             this disaster. Every contribution, big or small, makes difference. Please join us in
                             supporting the relief efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <input  type="text" placeholder="Write Donation Amount" class="input-amount-field border  p-3 rounded-xl">
+                        <input type="text" placeholder="Write Donation Amount"
+                            class="input-amount-field border  p-3 rounded-xl">
                         <div class="card-actions ">
-                            <button  class="btn-donaite btn btn-primary p-3 bg-green-400">Donate Now</button>
+                            <button class="btn-donaite btn btn-primary p-3 bg-green-400">Donate Now</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        
+        <!-- History Section -->
+
+        <section id="donation-history-section" class="hidden mt-10 border-t pt-5">
+            <h2 class=" text-2xl font-bold mb-4">Donation History</h2>
+            <ul id="donation-history" class="list-disc ml-6 text-gray-700"></ul>
+        </section>
     </main>
     <script src="./js/home.js"></script>
 </body>

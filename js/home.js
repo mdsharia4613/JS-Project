@@ -18,15 +18,23 @@
 //     else {
 //         alert('please amount')
 //     }
-// });
+// }); 
 
 const balanceElement = document.getElementById('amount-value'); // উপরের balance
+const historyList = document.getElementById('donation-history'); //history section
+const historySection = document.getElementById('donation-history-section');
+const historyButton = document.getElementById('show-history');
 
+// History section show or hidden
+historyButton.addEventListener('click', () =>{
+    historySection.classList.toggle('hidden');
+})
 document.querySelectorAll('.btn-donaite').forEach(button => {
     button.addEventListener('click', () => {
         const card = button.closest('.card'); // parent card
         const inputField = card.querySelector('.input-amount-field'); // card এর input
         const amountElement = card.querySelector('.amount'); // card এর amount
+         const cardTitle = card.querySelector('.card-title').innerText; 
 
         const inputValue = parseFloat(inputField.value);
 
@@ -38,8 +46,13 @@ document.querySelectorAll('.btn-donaite').forEach(button => {
 
             // উপরের balance update
             let balance = parseFloat(balanceElement.innerText);
-            updateBalance = balance - inputValue;
+            let updateBalance = balance - inputValue;
             balanceElement.innerText = updateBalance;
+
+            // Donation History
+            const li = document.createElement('li');
+            li.innerText = `Donated ${inputValue}BDT to "${cardTitle}"`;
+            historyList.appendChild(li);
 
             // input ফাঁকা
             inputField.value = '';
