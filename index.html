@@ -29,13 +29,13 @@
 
     <main>
         <section class="text-center mt-15">
-            <button class="btn bg-green-400 p-3">Donation</button>
+            <button id="show-donaite" class="btn bg-green-400 p-3">Donation</button>
             <button id="show-history" class="btn border p-3">History</button>
         </section>
 
-        <!-- card -->
+
         <section class="mt-8">
-            <div class="ml-50">
+            <div id="donited-container" class="ml-50">
                 <div class="card card-side bg-base-100 shadow-sm w-250 border p-5 mb-6">
 
                     <figure>
@@ -109,16 +109,19 @@
                     </div>
                 </div>
             </div>
+            <!-- History Section -->
+
+            <div id="donation-history-list" class="hidden mt-10 border-t pt-5">
+                <h2 class=" text-2xl font-bold mb-4 text-center">Donation History</h2>
+                <ul id="donation-history" class="list-disc ml-6 text-gray-700"></ul>
+            </div>
+
         </section>
 
-        <!-- History Section -->
 
-        <section id="donation-history-section" class="hidden mt-10 border-t pt-5">
-            <h2 class=" text-2xl font-bold mb-4">Donation History</h2>
-            <ul id="donation-history" class="list-disc ml-6 text-gray-700"></ul>
-        </section>
     </main>
     <script src="./js/home.js"></script>
-</body>
 
+</body>
+<!-- 
 </html>
